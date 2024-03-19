@@ -12,7 +12,7 @@ namespace IPO.Counting_the_Number_of_Characters
         and displays output that shows the input string 
         and the number of characters the string contains.
         */
-        static void Main1()
+        static void Main1() // Rename to Main() to run
         {
             System.Console.Write("What is the input string? ");
 
