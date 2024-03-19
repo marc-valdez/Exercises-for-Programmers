@@ -47,12 +47,8 @@ class PaintGallons:
 
         # Ensure that you round up to the next whole number.
         self.gallons = math.ceil(self.area / ONE_GALLON)
-
-        if self.gallons <= 1:
-            print(f"You will need to purchase 1 gallon of paint ")
-        else:
-            print(f"You will need to purchase {self.gallons} gallons of paint ")
-        print(f"to cover {self.area} square feet.")
+        plurality = self.gallons <= 1 and "gallon" or "gallons"
+        print(f"You will need to purchase {self.gallons} {plurality} of paint to cover {self.area} square feet.")
 
 
 print("[1] Square/Rectangular")
