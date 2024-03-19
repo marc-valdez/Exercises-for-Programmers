@@ -28,7 +28,7 @@ namespace CSharp._1__Input_Processing_and_Output.Mad_Lib
         // Create a simple mad-lib program that prompts for a noun,
         // a verb, an adverb, and an adjective
         // and injects those into a story that you create.
-        static void Main()
+        static void Main3() // Rename to Main() to run
         {
             MadLib madlib = new MadLib();
 
