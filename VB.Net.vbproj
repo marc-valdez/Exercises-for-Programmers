@@ -261,9 +261,7 @@
     <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.Designer.vb">
       <DependentUpon>NumberOfCharacters.vb</DependentUpon>
     </Compile>
-    <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.vb" />
     <Compile Include="[1] Input-Processing-and-Output\IPOMenu.Designer.vb">
       <DependentUpon>IPOMenu.vb</DependentUpon>
     </Compile>
