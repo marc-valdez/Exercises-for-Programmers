@@ -14,14 +14,14 @@ namespace IPO.Counting_the_Number_of_Characters
         */
         static void Main1() // Rename to Main() to run
         {
-            System.Console.Write("What is the input string? ");
+            Console.Write("What is the input string? ");
 
             string userInput = Console.ReadLine();
 
             // If the user enters nothing, state that the user must enter something into the program.
             if (userInput == "")
             {
-                System.Console.WriteLine("Please enter something...");
+                Console.WriteLine("Please enter something...");
                 Environment.Exit(1);
             }
 
@@ -30,7 +30,7 @@ namespace IPO.Counting_the_Number_of_Characters
             • Use a single output statement to construct the output.
             • Use a built-in function of the programming language to determine the length of the string.
             */
-            System.Console.WriteLine($"{userInput} has {userInput.Length} characters.");
+            Console.WriteLine($"{userInput} has {userInput.Length} characters.");
         }
     }
 }
