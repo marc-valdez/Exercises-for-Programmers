@@ -149,12 +149,12 @@
     <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.cs" />
     <Compile Include="[1] Input-Processing-and-Output\Mad-Lib\MadLib.cs" />
     <Compile Include="[1] Input-Processing-and-Output\Printing-Quotes\PrintingQuotes.cs" />
+    <Compile Include="[1] Input-Processing-and-Output\Retirement-Calculator\RetirementCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\objects\info\" />
     <Folder Include=".git\objects\pack\" />
     <Folder Include=".git\refs\tags\" />
-    <Folder Include="[1] Input-Processing-and-Output\Retirement-Calculator\" />
     <Folder Include="[2] Calculations\Area-of-a-Rectangular-Room\" />
     <Folder Include="[2] Calculations\Determining-Compound-Interest\" />
     <Folder Include="[2] Calculations\Paint-Calculator\" />
