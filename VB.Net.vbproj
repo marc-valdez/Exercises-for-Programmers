@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{559720ED-8032-4C9A-A72C-F49C9428E886}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>VB.Net.MadLib</StartupObject>
     <RootNamespace>VB.Net</RootNamespace>
     <AssemblyName>WindowsApplication</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +22,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +32,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -227,6 +229,7 @@
     <None Include=".vs\Exercises-for-Programmers\v17\DocumentLayout.json" />
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="app.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -253,6 +256,46 @@
     <Folder Include="[7] Working-with-Files\" />
     <Folder Include="[8] Working-with-External-Services\" />
     <Folder Include="[9] Full-Programs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.Designer.vb">
+      <DependentUpon>NumberOfCharacters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Mad-Lib\MadLib.Designer.vb">
+      <DependentUpon>MadLib.vb</DependentUpon>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Mad-Lib\MadLib.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Printing-Quotes\PrintingQuotes.Designer.vb">
+      <DependentUpon>PrintingQuotes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Printing-Quotes\PrintingQuotes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Retirement-Calculator\RetirementCalculator.Designer.vb">
+      <DependentUpon>RetirementCalculator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="[1] Input-Processing-and-Output\Retirement-Calculator\RetirementCalculator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.resx">
+      <DependentUpon>NumberOfCharacters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1] Input-Processing-and-Output\Mad-Lib\MadLib.resx">
+      <DependentUpon>MadLib.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1] Input-Processing-and-Output\Printing-Quotes\PrintingQuotes.resx">
+      <DependentUpon>PrintingQuotes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="[1] Input-Processing-and-Output\Retirement-Calculator\RetirementCalculator.resx">
+      <DependentUpon>RetirementCalculator.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
   <ProjectExtensions>
