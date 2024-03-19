@@ -8,9 +8,15 @@
 
 # Revise the program to ensure that prices and quantities are entered as numeric values.
 # Don’t allow the user to proceed if the value entered is not numeric.
-def ValidatedNumber(prompt, _min=None, _max=None, _type=None):
+def ValidatedNumber(prompt, _min=None, _max=None, _type=None, _sentinel=None):
     while True:
-        user_input = input(prompt)
+        if _sentinel is not None:
+            user_input = input(prompt[:-2] + f" (or type \'{_sentinel}\' to end): ")
+            if user_input.upper() == _sentinel:
+                return None
+        else:
+            user_input = input(prompt)
+
         # Be sure you explicitly convert input to numerical data before doing any calculations.
         try:
             number = float(user_input)
@@ -28,11 +34,14 @@ TAX = 0.055
 # Keep the input, processing, and output parts of your program separate.
 # Collect the input, then do the math operations and string building,
 # and then print out the output.
-
 class Item:
     def __init__(self, _i):
-        self.price = ValidatedNumber(f"Enter the price of item {_i}: ")
-        self.quantity = ValidatedNumber(f"Enter the quantity of item {_i}: ")
+        self.price = ValidatedNumber(f"Enter the price of item {_i}: ", _sentinel="STOP")
+        if self.price is None:
+            raise ValueError
+        self.quantity = ValidatedNumber(f"Enter the quantity of item {_i}: ", _sentinel="STOP")
+        if self.quantity is None:
+            raise ValueError
         self.subtotal = self.price * self.quantity
 
 
@@ -46,16 +55,19 @@ class Basket:
         self.total = self.subtotal + self.tax
 
     def display_totals(self):
-        print(f"Subtotal: ${round(self.subtotal, 2)}")
-        print(f"Tax: ${round(self.tax, 2)}")
-        print(f"Total: ${round(self.total, 2)}")
+        print(f"Subtotal: ${self.subtotal:.2f}")
+        print(f"Tax: ${self.tax:.2f}")
+        print(f"Total: ${self.total:.2f}")
 
 
 items = []
 i = 1
-item_count = ValidatedNumber("How many items do you have? ", _type="int")
-while i <= item_count:
-    items.append(Item(i))
+while True:
+    try:
+        items.append(Item(i))
+    except ValueError:
+        break
     i += 1
+
 checkout = Basket(items)
 checkout.display_totals()
