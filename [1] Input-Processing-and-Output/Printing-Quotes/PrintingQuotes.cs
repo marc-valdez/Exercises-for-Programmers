@@ -10,7 +10,7 @@ namespace CSharp._1__Input_Processing_and_Output.Printing_Quotes
     {
         // Create a program that prompts for a quote and an author.
         // Display the quotation and author as shown in the example output.
-        static void Main2()
+        static void Main2() // Rename to Main() to run
         {
             Console.Write("What is the quote? ");
             string quote = Console.ReadLine();
