@@ -7,7 +7,7 @@
 
 
 # Revise the program to ensure that prices and quantities are entered as numeric values.
-# Don’t allow the user to proceed if the value entered is not numeric.
+# Don't allow the user to proceed if the value entered is not numeric.
 def ValidatedNumber(prompt, _min=None, _max=None, _type=None, _sentinel=None):
     while True:
         if _sentinel is not None:

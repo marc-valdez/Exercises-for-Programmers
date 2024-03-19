@@ -7,7 +7,7 @@ CONVERSION_FACTOR = 0.09290304
 
 
 # Revise the program to ensure that inputs are entered as numeric values.
-# Don’t allow the user to proceed if the value entered is not numeric.
+# Don't allow the user to proceed if the value entered is not numeric.
 def ValidatedNumber(prompt, _min=None, _max=None):
     while True:
         user_input = input(prompt)
