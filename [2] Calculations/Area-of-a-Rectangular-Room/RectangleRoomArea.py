@@ -1,4 +1,6 @@
-import math
+# Create a program that calculates the area of a room.
+# Prompt the user for the length and width of the room in feet.
+# Then display the area in both square feet and square meters.
 
 # Use a constant to hold the conversion factor.
 CONVERSION_FACTOR = 0.09290304
