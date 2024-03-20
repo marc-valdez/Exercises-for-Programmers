@@ -5,23 +5,32 @@ namespace CSharp._2__Calculations.Pizza_Party
 {
     internal class PizzaParty
     {
-        static class Pizza
+        private class Pizza
         {
-            private static short people;
-            private static short pizzas;
-            private static short slices;
-            private static short pieces;
-            private static short leftovers;
-            public static void Splitter()
+            private static int people;
+            private static int pizzas;
+            private static int slices;
+            private static int pieces;
+            private static int leftovers;
+
+            public Pizza(string _method)
+            {
+                people = ValidatedNumber("How many people? ");
+                if (_method == "splitter")
+                    Splitter();
+                else
+                    Buyer();
+            }
+
+            private static void Splitter()
             {
                 // Input
-                people = (short)ValidatedNumber("How many people? ");
-                pizzas = (short)ValidatedNumber("How many pizzas do you have? ");
-                slices = (short)(ValidatedNumber("How many slices per pizza? ") * pizzas);
+                pizzas = ValidatedNumber("How many pizzas do you have? ");
+                slices = ValidatedNumber("How many slices per pizza? ") * pizzas;
 
                 // Process
-                pieces = (short)(slices / people);
-                leftovers = (short)(slices % people);
+                pieces = slices / people;
+                leftovers = slices % people;
 
                 // Output
                 Console.WriteLine($"{people} people with {pizzas} pizzas");
@@ -35,17 +44,16 @@ namespace CSharp._2__Calculations.Pizza_Party
                 else
                     Console.WriteLine($"There are {leftovers} leftover pieces.");
             }
-            public static void Buyer()
+            private static void Buyer()
             {
                 // Input
-                people = (short)ValidatedNumber("How many people? ");
-                slices = (short)ValidatedNumber("How many slices are there per pizza? ");
-                pieces = (short)(ValidatedNumber("How many slices does each person want? "));
-
+                pieces = ValidatedNumber("How many slices does each person want? ");
+                slices = ValidatedNumber("How many slices are there per pizza? ");
+                
                 // Process
-                var total_slices = (short)(people * pieces);
-                pizzas = (short)Math.Ceiling((decimal)(total_slices / slices));
-                leftovers = (short)(slices % people);
+                var total_slices = (people * pieces);
+                pizzas = (int)Math.Ceiling((decimal)(total_slices / slices));
+                leftovers = slices % people;
 
                 // Output
                 Console.WriteLine($"{people} people with {pieces} slices each");
@@ -61,15 +69,12 @@ namespace CSharp._2__Calculations.Pizza_Party
             }
         }
 
-        static void Main()
+        static void Main6()
         {
             Console.WriteLine("[1] I want to know how many slices each person should get.");
             Console.WriteLine("[2] I want to know how many pizzas I have to buy.");
-            short choice = (short)ValidatedNumber("Choose an option: ", _min: 1, _max: 2, _type: "short");
-            if (choice == 1)
-                Pizza.Splitter();
-            else
-                Pizza.Buyer();
+            var choice = ValidatedNumber("Choose an option: ", _min: 1, _max: 2);
+            _ = (choice == 1) ? new Pizza("splitter") : new Pizza("buyer");
         }
     }
 }
