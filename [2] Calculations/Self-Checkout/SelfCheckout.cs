@@ -46,7 +46,7 @@ namespace CSharp._2__Calculations.Self_Checkout
             }
         }
 
-        static void Main()
+        static void Main8()
         {
             List<Item> items = [];
             for (int i = 1; true; i++)
