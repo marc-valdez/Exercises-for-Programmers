@@ -5,21 +5,25 @@ namespace CSharp._2__Calculations.Pizza_Party
 {
     internal class PizzaParty
     {
-        class PizzaSplitter
+        static class Pizza
         {
-            private readonly short people;
-            private readonly short pizzas;
-            private readonly short slices;
-            private readonly short pieces;
-            private readonly short leftovers;
-            public PizzaSplitter()
+            private static short people;
+            private static short pizzas;
+            private static short slices;
+            private static short pieces;
+            private static short leftovers;
+            public static void Splitter()
             {
+                // Input
                 people = (short)ValidatedNumber("How many people? ");
                 pizzas = (short)ValidatedNumber("How many pizzas do you have? ");
                 slices = (short)(ValidatedNumber("How many slices per pizza? ") * pizzas);
+
+                // Process
                 pieces = (short)(slices / people);
                 leftovers = (short)(slices % people);
 
+                // Output
                 Console.WriteLine($"{people} people with {pizzas} pizzas");
                 if (pieces == 1)
                     Console.WriteLine($"Each person gets 1 piece of pizza.");
@@ -31,24 +35,19 @@ namespace CSharp._2__Calculations.Pizza_Party
                 else
                     Console.WriteLine($"There are {leftovers} leftover pieces.");
             }
-        }
-
-        class PizzaBuyer
-        {
-            private readonly short people;
-            private readonly short pizzas;
-            private readonly short slices;
-            private readonly short pieces;
-            private readonly short leftovers;
-            public PizzaBuyer()
+            public static void Buyer()
             {
+                // Input
                 people = (short)ValidatedNumber("How many people? ");
                 slices = (short)ValidatedNumber("How many slices are there per pizza? ");
                 pieces = (short)(ValidatedNumber("How many slices does each person want? "));
+
+                // Process
                 var total_slices = (short)(people * pieces);
                 pizzas = (short)Math.Ceiling((decimal)(total_slices / slices));
                 leftovers = (short)(slices % people);
 
+                // Output
                 Console.WriteLine($"{people} people with {pieces} slices each");
                 if (pieces <= 1)
                     Console.WriteLine($"You need to buy 1 full pizza.");
@@ -68,9 +67,9 @@ namespace CSharp._2__Calculations.Pizza_Party
             Console.WriteLine("[2] I want to know how many pizzas I have to buy.");
             short choice = (short)ValidatedNumber("Choose an option: ", _min: 1, _max: 2, _type: "short");
             if (choice == 1)
-                _ = new PizzaSplitter();
+                Pizza.Splitter();
             else
-                _ = new PizzaBuyer();
+                Pizza.Buyer();
         }
     }
 }
