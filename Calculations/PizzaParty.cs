@@ -53,7 +53,7 @@ namespace CSharp.Calculations
                 // Process
                 var total_slices = (people * pieces);
                 pizzas = (int)Math.Ceiling((decimal)(total_slices / slices));
-                leftovers = slices % people;
+                leftovers = total_slices % people;
 
                 // Output
                 Console.WriteLine($"{people} people with {pieces} slices each");
