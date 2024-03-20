@@ -1,8 +1,11 @@
 ﻿Public Class PizzaParty
-    Private _people, _pizzas, _slices, _pieces, _leftovers As Integer
+    Private _people = 1, _pizzas = 1, _slices = 1, _pieces = 1, _leftovers = 1
 
     Private Sub NumericUpDown_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_people.ValueChanged, NumericUpDown_q1.ValueChanged, NumericUpDown_q2.ValueChanged
-        _people = NumericUpDown_people.Value
+        If NumericUpDown_people.Value <> 0 Then
+            _people = NumericUpDown_people.Value
+        End If
+
         UpdateData()
         UpdateQuestionText()
         UpdateOutputText()
@@ -60,22 +63,25 @@
 
     Private Sub UpdateData()
         If RadioButton1.Checked Then
-            _pizzas = NumericUpDown_q1.Value
-            _slices = NumericUpDown_q2.Value * _pizzas
+            If NumericUpDown_q1.Value <> 0 Then
+                _pizzas = NumericUpDown_q1.Value
+            End If
+            If NumericUpDown_q2.Value <> 0 Then
+                _slices = NumericUpDown_q2.Value * _pizzas
+            End If
 
             _pieces = Math.Floor(_slices / _people)
             _leftovers = _slices Mod _people
         Else
-            _pieces = NumericUpDown_q1.Value * _people
-            _slices = NumericUpDown_q2.Value
-
-            If _slices = 0 Then
-                _pizzas = 0
-                _leftovers = 0
-            Else
-                _pizzas = Math.Ceiling(_pieces / _slices)
-                _leftovers = _pizzas * _slices - _pieces
+            If NumericUpDown_q1.Value <> 0 Then
+                _pieces = NumericUpDown_q1.Value * _people
             End If
+            If NumericUpDown_q2.Value <> 0 Then
+                _slices = NumericUpDown_q2.Value
+            End If
+
+            _pizzas = Math.Ceiling(_pieces / _slices)
+            _leftovers = _pizzas * _slices - _pieces
         End If
     End Sub
 End Class
