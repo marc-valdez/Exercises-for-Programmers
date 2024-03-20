@@ -109,7 +109,6 @@
     <Folder Include=".git\objects\pack\" />
     <Folder Include=".git\refs\tags\" />
     <Folder Include="[2] Calculations\Determining-Compound-Interest\" />
-    <Folder Include="[2] Calculations\Self-Checkout\" />
     <Folder Include="[3] Making-Decisions\" />
     <Folder Include="[4] Functions\" />
     <Folder Include="[5] Repetition\" />
