@@ -8,6 +8,14 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove=".idea\**" />
+    <Compile Remove=".vs\**" />
+    <EmbeddedResource Remove=".idea\**" />
+    <EmbeddedResource Remove=".vs\**" />
+    <None Remove=".idea\**" />
+    <None Remove=".vs\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include=".git\COMMIT_EDITMSG" />
     <None Include=".git\config" />
     <None Include=".git\description" />
@@ -91,18 +99,6 @@
     <None Include=".git\refs\heads\c#" />
     <None Include=".git\refs\heads\python" />
     <None Include=".git\refs\heads\vb.net" />
-    <None Include=".idea\.gitignore" />
-    <None Include=".vs\Exercises-for-Programmers\FileContentIndex\aaf82932-9cfa-4171-862b-96722853a4dd.vsidx" />
-    <None Include=".vs\Exercises-for-Programmers\v17\.wsuo" />
-    <None Include=".vs\Exercises-for-Programmers\v17\DocumentLayout.json" />
-    <None Include=".vs\slnx.sqlite" />
-    <None Include=".vs\VSWorkspaceState.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".idea\inspectionProfiles\profiles_settings.xml" />
-    <Content Include=".idea\misc.xml" />
-    <Content Include=".idea\vcs.xml" />
-    <Content Include=".idea\workspace.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".git\objects\info\" />
