@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp._1__Input_Processing_and_Output.Printing_Quotes
+namespace CSharp.IPO
 {
     internal class PrintingQuotes
     {
         // Create a program that prompts for a quote and an author.
         // Display the quotation and author as shown in the example output.
-        static void Main2() // Rename to Main() to run
+        public static void Main2()
         {
             Console.Write("What is the quote? ");
             string quote = Console.ReadLine();

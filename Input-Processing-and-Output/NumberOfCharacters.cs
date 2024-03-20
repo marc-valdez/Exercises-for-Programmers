@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace IPO.Counting_the_Number_of_Characters
+namespace CSharp.IPO
 {
     internal class NumberOfCharacters
     {
@@ -12,7 +9,7 @@ namespace IPO.Counting_the_Number_of_Characters
         and displays output that shows the input string 
         and the number of characters the string contains.
         */
-        static void Main1() // Rename to Main() to run
+        public static void Main1()
         {
             Console.Write("What is the input string? ");
 

@@ -1,7 +1,7 @@
 ﻿using System;
-using static CSharp._2__Calculations.DataValidation;
+using static CSharp.DataValidation;
 
-namespace CSharp._2__Calculations.Pizza_Party
+namespace CSharp.Calculations
 {
     internal class PizzaParty
     {
@@ -69,7 +69,7 @@ namespace CSharp._2__Calculations.Pizza_Party
             }
         }
 
-        static void Main6()
+        public static void Main6()
         {
             Console.WriteLine("[1] I want to know how many slices each person should get.");
             Console.WriteLine("[2] I want to know how many pizzas I have to buy.");

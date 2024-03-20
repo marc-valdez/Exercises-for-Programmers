@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using static CSharp._2__Calculations.DataValidation;
+using static CSharp.DataValidation;
 
-namespace CSharp._2__Calculations.Self_Checkout
+namespace CSharp.Calculations
 {
     internal class SelfCheckout
     {
@@ -46,7 +46,7 @@ namespace CSharp._2__Calculations.Self_Checkout
             }
         }
 
-        static void Main8()
+        public static void Main8()
         {
             List<Item> items = [];
             for (int i = 1; true; i++)

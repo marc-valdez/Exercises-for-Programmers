@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp._1__Input_Processing_and_Output.Retirement_Calculator
+namespace CSharp.IPO
 {
     // Create a program that determines how many years you have
     // left until retirement and the year you can retire.
@@ -24,7 +24,7 @@ namespace CSharp._1__Input_Processing_and_Output.Retirement_Calculator
             return value;
         }
 
-        static void Main4() // Rename to Main() to run
+        public static void Main4() // Rename to Main() to run
         {
             int age = IntValidation("What is your current age? ");
             int retirementAge = IntValidation("At what age would you like to retire? ");

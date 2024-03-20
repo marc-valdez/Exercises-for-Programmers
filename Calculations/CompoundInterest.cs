@@ -1,7 +1,7 @@
 ﻿using System;
-using static CSharp._2__Calculations.DataValidation;
+using static CSharp.DataValidation;
 
-namespace CSharp._2__Calculations.Determining_Compound_Interest
+namespace CSharp.Calculations
 {
     internal class CompoundInterest
     {
@@ -43,7 +43,7 @@ namespace CSharp._2__Calculations.Determining_Compound_Interest
             }
         }
 
-        static void Main()
+        public static void Main9()
         {
             Console.WriteLine("[1] I want to know how much money I'll get after my investment period.");
             Console.WriteLine("[2] I want to know how much money I'll need to invest to reach a certain goal.");

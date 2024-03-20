@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp._1__Input_Processing_and_Output.Mad_Lib
+namespace CSharp.IPO
 {
-
     internal class MadLib
     {
         internal string noun, verb, adjective, adverb;
@@ -28,7 +27,7 @@ namespace CSharp._1__Input_Processing_and_Output.Mad_Lib
         // Create a simple mad-lib program that prompts for a noun,
         // a verb, an adverb, and an adjective
         // and injects those into a story that you create.
-        static void Main3() // Rename to Main() to run
+        public static void Main3()
         {
             MadLib madlib = new MadLib();
 

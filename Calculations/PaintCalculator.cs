@@ -1,6 +1,6 @@
 ﻿using System;
-using static CSharp._2__Calculations.DataValidation;
-namespace CSharp._2__Calculations.Paint_Calculator
+using static CSharp.DataValidation;
+namespace CSharp.Calculations
 {
     internal class PaintCalculator
     {
@@ -47,7 +47,7 @@ namespace CSharp._2__Calculations.Paint_Calculator
             }
         }
 
-        static void Main7()
+        public static void Main7()
         {
             Console.WriteLine("[1] Square/Rectangular");
             Console.WriteLine("[2] Round");

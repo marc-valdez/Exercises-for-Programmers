@@ -1,7 +1,7 @@
 ﻿using System;
-using static CSharp._2__Calculations.DataValidation;
+using static CSharp.DataValidation;
 
-namespace CSharp._2__Calculations.Area_of_a_Rectangular_Room
+namespace CSharp.Calculations
 {
     internal class RectangularRoomArea
     {
@@ -41,7 +41,7 @@ namespace CSharp._2__Calculations.Area_of_a_Rectangular_Room
             }
         }
 
-        static void Main5()
+        public static void Main5()
         {
             var choice = ValidatedNumber("[1] Feet\n[2] Meters\nEnter your choice: ", _min: 1, _max: 2);
             _ = choice == 1 ? new Room("feet") : new Room("meters");
