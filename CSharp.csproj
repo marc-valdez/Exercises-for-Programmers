@@ -1,52 +1,13 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <TargetFramework>net8.0</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{DCB1481B-098C-4A32-B3F7-4F24CE3BC97A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>ConsoleApplication</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup>
-    <RootNamespace>CSharp</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitattributes" />
-    <None Include=".gitignore" />
     <None Include=".git\COMMIT_EDITMSG" />
     <None Include=".git\config" />
     <None Include=".git\description" />
@@ -136,8 +97,6 @@
     <None Include=".vs\Exercises-for-Programmers\v17\DocumentLayout.json" />
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
-    <None Include="app.config" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".idea\inspectionProfiles\profiles_settings.xml" />
@@ -146,16 +105,9 @@
     <Content Include=".idea\workspace.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="[1] Input-Processing-and-Output\Counting-the-Number-of-Characters\NumberOfCharacters.cs" />
-    <Compile Include="[1] Input-Processing-and-Output\Mad-Lib\MadLib.cs" />
-    <Compile Include="[1] Input-Processing-and-Output\Printing-Quotes\PrintingQuotes.cs" />
-    <Compile Include="[1] Input-Processing-and-Output\Retirement-Calculator\RetirementCalculator.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include=".git\objects\info\" />
     <Folder Include=".git\objects\pack\" />
     <Folder Include=".git\refs\tags\" />
-    <Folder Include="[2] Calculations\Area-of-a-Rectangular-Room\" />
     <Folder Include="[2] Calculations\Determining-Compound-Interest\" />
     <Folder Include="[2] Calculations\Paint-Calculator\" />
     <Folder Include="[2] Calculations\Pizza-Party\" />
@@ -168,7 +120,10 @@
     <Folder Include="[8] Working-with-External-Services\" />
     <Folder Include="[9] Full-Programs\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
   <ProjectExtensions>
     <VisualStudio AllowExistingFolder="true" />
   </ProjectExtensions>
