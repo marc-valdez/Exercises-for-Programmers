@@ -3,7 +3,7 @@ namespace CSharp._2__Calculations
 {
     public static class DataValidation
     {
-        public static float? ValidatedNumber(string prompt, short? _min = null, short? _max = null, string _type = null, string _sentinel = null)
+        public static dynamic ValidatedNumber(string prompt, short? _min = null, short? _max = null, string _sentinel = null)
         {
             while (true)
             {
@@ -25,7 +25,7 @@ namespace CSharp._2__Calculations
                 {
                     float number = Convert.ToSingle(user_input);
                     if ((_min == null) || (_min <= number) && (_max == null) || (_max >= number))
-                        return _type == "float" ? number : Convert.ToInt32(number);
+                        return number;
                     else
                         Console.WriteLine($"Input out of range. [{_min}-{_max}]");
                 }
