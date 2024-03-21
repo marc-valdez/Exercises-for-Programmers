@@ -149,6 +149,7 @@ Partial Class MadLib
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Name = "MadLib"
+        StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Mad Lib"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()

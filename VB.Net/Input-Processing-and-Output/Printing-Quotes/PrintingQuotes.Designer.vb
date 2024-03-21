@@ -82,6 +82,7 @@ Partial Class PrintingQuotes
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "PrintingQuotes"
+        StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Printing Quotes"
         Me.ResumeLayout(False)
         Me.PerformLayout()

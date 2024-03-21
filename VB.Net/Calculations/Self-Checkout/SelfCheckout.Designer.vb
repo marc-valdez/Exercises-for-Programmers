@@ -80,7 +80,7 @@ Partial Class SelfCheckout
         Button2.Text = "Checkout"
         Button2.UseVisualStyleBackColor = True
         ' 
-        ' Form1
+        ' SelfCheckout
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
@@ -88,7 +88,8 @@ Partial Class SelfCheckout
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(ItemList)
-        Name = "Form1"
+        Name = "SelfCheckout"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Self-Checkout"
         CType(ItemList, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

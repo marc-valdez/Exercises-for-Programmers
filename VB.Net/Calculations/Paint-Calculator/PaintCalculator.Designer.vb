@@ -215,6 +215,7 @@ Partial Class PaintCalculator
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Name = "PaintCalculator"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Paint Calculator"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

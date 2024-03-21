@@ -182,6 +182,7 @@ Partial Class RoomArea
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Name = "RoomArea"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Area of a Rectangular Room"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()

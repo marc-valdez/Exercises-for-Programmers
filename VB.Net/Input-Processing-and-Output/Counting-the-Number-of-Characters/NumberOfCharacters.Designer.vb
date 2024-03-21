@@ -51,6 +51,7 @@ Partial Class NumberOfCharacters
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "NumberOfCharacters"
+        StartPosition = FormStartPosition.CenterScreen
         Me.Text = "Counting the Number of Characters"
         Me.ResumeLayout(False)
         Me.PerformLayout()

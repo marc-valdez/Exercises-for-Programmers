@@ -79,6 +79,7 @@ Partial Class IPOMenu
         Controls.Add(Button1)
         Margin = New Padding(4, 3, 4, 3)
         Name = "IPOMenu"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "IPO"
         ResumeLayout(False)
 

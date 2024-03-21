@@ -92,6 +92,7 @@ Partial Class CalculationsMenu
         Controls.Add(Button1)
         Margin = New Padding(4, 3, 4, 3)
         Name = "CalculationsMenu"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Calculations"
         ResumeLayout(False)
 

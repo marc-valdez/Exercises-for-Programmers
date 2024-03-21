@@ -180,6 +180,7 @@ Partial Class PizzaParty
         Controls.Add(GroupBox1)
         Controls.Add(TableLayoutPanel1)
         Name = "PizzaParty"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Pizza Party"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()

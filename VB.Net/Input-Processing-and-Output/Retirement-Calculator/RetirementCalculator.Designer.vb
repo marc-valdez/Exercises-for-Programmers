@@ -24,8 +24,8 @@ Partial Class RetirementCalculator
     Private Sub InitializeComponent()
         TableLayoutPanel1 = New TableLayoutPanel()
         Label1 = New Label()
-        Label2 = New Label()
         NumericUpDown1 = New NumericUpDown()
+        Label2 = New Label()
         NumericUpDown2 = New NumericUpDown()
         Label3 = New Label()
         TableLayoutPanel1.SuspendLayout()
@@ -48,32 +48,21 @@ Partial Class RetirementCalculator
         TableLayoutPanel1.Margin = New Padding(4, 3, 4, 3)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
-        TableLayoutPanel1.Size = New Size(356, 58)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
+        TableLayoutPanel1.Size = New Size(353, 58)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.Anchor = AnchorStyles.Left
         Label1.AutoSize = True
-        Label1.Location = New Point(121, 7)
+        Label1.Location = New Point(120, 7)
         Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(141, 15)
         Label1.TabIndex = 0
         Label1.Text = "What is your current age?"
-        ' 
-        ' Label2
-        ' 
-        Label2.Anchor = AnchorStyles.Left
-        Label2.AutoSize = True
-        Label2.Location = New Point(121, 36)
-        Label2.Margin = New Padding(4, 0, 4, 0)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(199, 15)
-        Label2.TabIndex = 1
-        Label2.Text = "At what age would you like to retire?"
         ' 
         ' NumericUpDown1
         ' 
@@ -81,8 +70,19 @@ Partial Class RetirementCalculator
         NumericUpDown1.Location = New Point(4, 3)
         NumericUpDown1.Margin = New Padding(4, 3, 4, 3)
         NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(109, 23)
+        NumericUpDown1.Size = New Size(108, 23)
         NumericUpDown1.TabIndex = 2
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Left
+        Label2.AutoSize = True
+        Label2.Location = New Point(120, 36)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(199, 15)
+        Label2.TabIndex = 1
+        Label2.Text = "At what age would you like to retire?"
         ' 
         ' NumericUpDown2
         ' 
@@ -90,13 +90,13 @@ Partial Class RetirementCalculator
         NumericUpDown2.Location = New Point(4, 32)
         NumericUpDown2.Margin = New Padding(4, 3, 4, 3)
         NumericUpDown2.Name = "NumericUpDown2"
-        NumericUpDown2.Size = New Size(109, 23)
+        NumericUpDown2.Size = New Size(108, 23)
         NumericUpDown2.TabIndex = 3
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(14, 84)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
@@ -107,13 +107,14 @@ Partial Class RetirementCalculator
         ' 
         ' RetirementCalculator
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(387, 131)
         Controls.Add(Label3)
         Controls.Add(TableLayoutPanel1)
         Margin = New Padding(4, 3, 4, 3)
         Name = "RetirementCalculator"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Retirement Calculator"
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.PerformLayout()
