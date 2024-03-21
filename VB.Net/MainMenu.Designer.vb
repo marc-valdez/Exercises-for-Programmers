@@ -52,6 +52,7 @@ Partial Class MainMenu
         Controls.Add(Button2)
         Controls.Add(Button1)
         Name = "MainMenu"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Main Menu"
         ResumeLayout(False)
     End Sub
