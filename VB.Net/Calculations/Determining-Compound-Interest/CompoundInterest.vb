@@ -8,7 +8,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim _principalAmount = 0.0, _goal = 0.0, _annualRate = 0.0, _yearsInvested = 0, _timesCompounded = 0
+        Dim _principalAmount = 0.0, _goal = 0.0
         If RadioButton1.Checked Then
             Label1.Text = "What is the principal amount?"
             _principalAmount = NumericUpDown1.Value
@@ -17,9 +17,9 @@
             _goal = NumericUpDown1.Value
         End If
 
-        _annualRate = NumericUpDown2.Value
-        _yearsInvested = NumericUpDown3.Value
-        _timesCompounded = NumericUpDown4.Value
+        Dim _annualRate As Single = NumericUpDown2.Value
+        Dim _yearsInvested As Integer = NumericUpDown3.Value
+        Dim _timesCompounded As Byte = NumericUpDown4.Value
 
         Dim incrementalFactor = 1 + (_annualRate / 100 / _timesCompounded)
         Dim exponent = _timesCompounded * _yearsInvested
