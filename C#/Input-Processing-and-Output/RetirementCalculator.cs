@@ -9,20 +9,20 @@ namespace CSharp.IPO
     {
         // Don't hard-code the current year into your program.
         // Get it from the system time via your programming language.
-        static readonly int yearNow = DateTime.Now.Year;
+        static readonly short yearNow = (short)DateTime.Now.Year;
 
         public static void Main4() // Rename to Main() to run
         {
-            int age = ValidatedNumber("What is your current age? ");
-            int retirementAge = ValidatedNumber("At what age would you like to retire? ");
+            byte age = ValidatedNumber<byte>("What is your current age? ");
+            byte retirementAge = ValidatedNumber<byte>("At what age would you like to retire? ");
 
-            int yearsLeft = retirementAge - age;
+            byte yearsLeft = (byte)(retirementAge - age);
             // Handle situations where the program returns a negative
             // number by stating that the user can already retire.
             if (yearsLeft <= 0)
             {
                 Console.WriteLine("You can already retire.");
-                Environment.Exit(0);
+                return;
             }
 
             Console.WriteLine($"You have {yearsLeft} years left until you can retire.");

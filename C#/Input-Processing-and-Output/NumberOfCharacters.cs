@@ -12,14 +12,14 @@
             Console.Write("What is the input string? ");
 
             string? userInput = Console.ReadLine();
-
             if (userInput != null)
             { 
                 // If the user enters nothing, state that the user must enter something into the program.
                 if (userInput == "")
                 {
                     Console.WriteLine("Please enter something...");
-                    Environment.Exit(1);
+                    Console.ReadKey();
+                    return;
                 }
 
                 /*
