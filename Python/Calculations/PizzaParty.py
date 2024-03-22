@@ -1,24 +1,14 @@
+# Revise the program to ensure that inputs are entered as numeric values.
+# Don't allow the user to proceed if the value entered is not numeric.
+from DataValidation import ValidatedNumber
+import math
+
+
 # Write a program to evenly divide pizzas.
 # Prompt for the number of people, the number of pizzas, and the number of slices per pizza.
 # Ensure that the number of pieces comes out even.
 # Display the number of pieces of pizza each person should get.
 # If there are leftovers, show the number of leftover pieces.
-import math
-
-
-# Revise the program to ensure that inputs are entered as numeric values.
-# Don't allow the user to proceed if the value entered is not numeric.
-def ValidatedNumber(prompt, _min=None, _max=None):
-    while True:
-        user_input = input(prompt)
-        try:
-            number = float(user_input)
-            if (_min is None or _min <= number) and (_max is None or _max >= number):
-                return number
-            else:
-                print(f"Input out of range. [{_min}-{_max}]")
-        except ValueError:
-            print("! Error: Input is NaN")
 
 
 class PizzaSplitter:
@@ -26,19 +16,25 @@ class PizzaSplitter:
         self.people = ValidatedNumber("How many people? ")
         self.pizzas = ValidatedNumber("How many pizzas do you have? ")
         self.slices = ValidatedNumber("How many slices per pizza? ") * self.pizzas
-        self.pieces = int(self.slices / self.people)
+        self.pieces = math.floor(self.slices / self.people)
         self.leftovers = self.slices % self.people
 
         # Alter the output so it handles pluralization properly.
-        print(f"{int(self.people)} people with {int(self.pizzas)} pizzas")
-        if self.pieces == 1:
-            print(f"Each person gets 1 piece of pizza.")
+        plurality = int(self.pizzas) == 1 and "pizza" or "pizzas"
+        print(f"{int(self.people)} people with {int(self.pizzas)} {plurality}")
+
+        if self.pieces == 0:
+            print("There aren't enough pizzas.")
+        elif self.pieces == 1:
+            print("Each person gets a piece of pizza.")
         else:
             print(f"Each person gets {int(self.pieces)} pieces of pizza.")
 
         # Handle the output for leftover pieces appropriately as well.
         if self.leftovers == 0:
             print("There are no leftovers.")
+        elif self.leftovers == 1:
+            print(f"There is one leftover piece.")
         else:
             print(f"There are {int(self.leftovers)} leftover pieces.")
 
@@ -50,21 +46,22 @@ class PizzaBuyer:
     def __init__(self):
         self.people = ValidatedNumber("How many people? ")
         self.slices = ValidatedNumber("How many slices are there per pizza? ")
-        self.pieces = ValidatedNumber("How many slices does each person want? ")
-        total_slices = self.people * self.pieces
-        self.pizzas = math.ceil(total_slices / self.slices)
-        self.leftovers = (self.pizzas * self.slices) - total_slices
+        self.pieces = ValidatedNumber("How many slices does each person want? ") * self.people
+        self.pizzas = math.ceil(self.pieces / self.slices)
+        self.leftovers = (self.pizzas * self.slices) - self.pieces
 
         # Alter the output so it handles pluralization properly.
-        print(f"{int(self.people)} people with {int(self.pieces)} slices each")
-        if self.pizzas <= 1:
-            print(f"You need to buy 1 full pizza.")
-        else:
-            print(f"You need to buy {int(self.pizzas)} full pizzas.")
+        plurality = int(self.pieces / self.people) == 1 and "slice" or "slices"
+        print(f"{int(self.people)} people with {int(self.pieces / self.people)} {plurality} each")
+
+        plurality = int(self.pizzas) <= 1 and "pizza" or "pizzas"
+        print(f"You need to buy {int(self.pizzas)} full {plurality}.")
 
         # Handle the output for leftover pieces appropriately as well.
         if self.leftovers == 0:
             print("There will be no leftovers.")
+        elif self.leftovers == 1:
+            print(f"There will be one leftover.")
         else:
             print(f"There will be {int(self.leftovers)} leftover pieces.")
 
