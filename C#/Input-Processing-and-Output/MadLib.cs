@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace CSharp.IPO
+﻿namespace CSharp.IPO
 {
     internal class MadLib
     {
-        internal string noun, verb, adjective, adverb;
+        internal string? noun, verb, adjective, adverb;
         internal MadLib() 
         {
             Console.Write("Enter a noun: ");
@@ -25,14 +23,14 @@ namespace CSharp.IPO
         // and injects those into a story that you create.
         public static void Main3()
         {
-            MadLib madlib = new MadLib();
+            MadLib madlib = new();
 
             /*
              • Use a single output statement for this program.
              • If your language supports string interpolation or string
                substitution, use it to build up the output.
             */
-            Console.WriteLine($"Do you {madlib.verb} your {madlib.adjective} {madlib.noun} {madlib.adverb}? That's hilarious!");
+            Console.WriteLine($"Did you know that a {madlib.adjective} {madlib.noun} can {madlib.adverb} {madlib.verb}? I know! It's crazy!");
         }
     }
 }
