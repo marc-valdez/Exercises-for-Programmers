@@ -2,15 +2,7 @@
     Private _area = 1, _gallons = 1, _plurality = ""
     Private Const GALLONS = 350 'Square Feet
 
-    Private Sub RadioButton_ValueChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged, RadioButton2.CheckedChanged, RadioButton3.CheckedChanged
-        Calculate()
-    End Sub
-
-    Private Sub NumericUpDown_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown1.ValueChanged, NumericUpDown2.ValueChanged, NumericUpDown3.ValueChanged, NumericUpDown4.ValueChanged
-        Calculate()
-    End Sub
-
-    Private Sub Calculate()
+    Private Sub UpdateOnChange(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged, RadioButton2.CheckedChanged, RadioButton3.CheckedChanged, NumericUpDown1.ValueChanged, NumericUpDown2.ValueChanged, NumericUpDown3.ValueChanged, NumericUpDown4.ValueChanged
         If NumericUpDown1.Value <> 0 And NumericUpDown2.Value <> 0 And NumericUpDown3.Value <> 0 And NumericUpDown4.Value <> 0 Then
             If RadioButton1.Checked Then
                 _area = Rectangular()
@@ -67,8 +59,8 @@
 
         Dim _length1 As Integer = NumericUpDown1.Value
         Dim _width1 As Integer = NumericUpDown2.Value
-        Dim _length2 As Integer = NumericUpDown1.Value
-        Dim _width2 As Integer = NumericUpDown2.Value
+        Dim _length2 As Integer = NumericUpDown3.Value
+        Dim _width2 As Integer = NumericUpDown4.Value
         Return (_length1 * _width1) + (_length2 * _width2)
     End Function
 End Class
