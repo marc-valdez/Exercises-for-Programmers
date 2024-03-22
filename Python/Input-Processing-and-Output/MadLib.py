@@ -16,4 +16,4 @@ madlib = Madlib()
 # If your language supports string interpolation or string substitution,
 # use it to build up the output.
 
-print(f"Do you {madlib.verb} your {madlib.adjective} {madlib.noun} {madlib.adverb}? That's hilarious!")
+print(f"Did you know that a {madlib.adjective} {madlib.noun} can {madlib.adverb} {madlib.verb}? I know! It's crazy!")
