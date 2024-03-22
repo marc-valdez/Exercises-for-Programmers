@@ -1,5 +1,4 @@
-﻿using System;
-using static CSharp.DataValidation;
+﻿using static CSharp.DataValidation;
 
 namespace CSharp.Calculations
 {
@@ -7,7 +6,8 @@ namespace CSharp.Calculations
     {
         class Interest
         {
-            private readonly dynamic principalAmount, annualRate, yearsInvested, timesCompounded, goal;
+            private readonly double principalAmount, annualRate, goal;
+            private readonly byte yearsInvested, timesCompounded;
 
             public Interest(string _method)
             {
@@ -20,9 +20,9 @@ namespace CSharp.Calculations
                 yearsInvested = ValidatedNumber("What is the number of years? ");
                 timesCompounded = ValidatedNumber("What is the number of times the interest is compounded per year? ");
 
-                var incrementalFactor = 1 + (annualRate / timesCompounded);
-                var exponent = timesCompounded * yearsInvested;
-                var compound = Math.Pow(incrementalFactor, exponent);
+                double incrementalFactor = 1 + (annualRate / timesCompounded);
+                byte exponent = (byte)(timesCompounded * yearsInvested);
+                double compound = Math.Pow(incrementalFactor, exponent);
 
                 if (_method == "predict")
                     goal = principalAmount * compound;
