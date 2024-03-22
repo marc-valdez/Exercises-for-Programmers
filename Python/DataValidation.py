@@ -12,5 +12,7 @@ def ValidatedNumber(prompt, _min=None, _max=None, _sentinel=None):
                 return number
             else:
                 print(f"Input out of range. [{_min}-{_max}]")
+        except OverflowError:
+            print("! Error: Input is too large.")
         except ValueError:
-            print("! Error: Input is NaN")
+            print("! Error: Input is Not-a-Number.")
