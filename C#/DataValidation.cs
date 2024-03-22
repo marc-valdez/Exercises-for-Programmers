@@ -1,18 +1,17 @@
-﻿using System;
-namespace CSharp
+﻿namespace CSharp
 {
     public static class DataValidation
     {
-        public static dynamic ValidatedNumber(string prompt, dynamic _min = null, dynamic _max = null, string _sentinel = null, string _action = "end")
+        public static dynamic? ValidatedNumber(string prompt, dynamic _min = null, dynamic _max = null, string _sentinel = null, string _action = "end")
         {
             while (true)
             {
-                string user_input;
+                string? user_input = "";
                 if (_sentinel != null)
                 {
                     Console.Write(prompt.Remove(prompt.Length - 2) + $" (or type '{_sentinel}' to {_action}): ");
                     user_input = Console.ReadLine();
-                    if (user_input.Equals(_sentinel, StringComparison.CurrentCultureIgnoreCase))
+                    if (user_input != null && user_input.Equals(_sentinel, StringComparison.CurrentCultureIgnoreCase))
                         return null;
                 }
                 else
