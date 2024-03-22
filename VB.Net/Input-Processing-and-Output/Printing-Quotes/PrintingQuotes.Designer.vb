@@ -22,70 +22,80 @@ Partial Class PrintingQuotes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "What is the quote?"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 25)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(298, 46)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = ""
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(84, 74)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 20)
-        Me.TextBox1.TabIndex = 2
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 77)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Who said it?"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 97)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(143, 13)
-        Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Someone says, ""something."""
-        '
-        'PrintingQuotes
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 144)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "PrintingQuotes"
+        Label1 = New Label()
+        RichTextBox1 = New RichTextBox()
+        TextBox1 = New TextBox()
+        Label2 = New Label()
+        Label3 = New Label()
+        SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(14, 10)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(105, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "What is the quote?"
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.Location = New Point(14, 29)
+        RichTextBox1.Margin = New Padding(4, 3, 4, 3)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(347, 52)
+        RichTextBox1.TabIndex = 1
+        RichTextBox1.Text = ""
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.Location = New Point(98, 85)
+        TextBox1.Margin = New Padding(4, 3, 4, 3)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(263, 23)
+        TextBox1.TabIndex = 2
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(14, 89)
+        Label2.Margin = New Padding(4, 0, 4, 0)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(71, 15)
+        Label2.TabIndex = 3
+        Label2.Text = "Who said it?"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(10, 112)
+        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(158, 15)
+        Label3.TabIndex = 4
+        Label3.Text = "Someone says, ""something."""
+        ' 
+        ' PrintingQuotes
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(376, 166)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
+        Controls.Add(TextBox1)
+        Controls.Add(RichTextBox1)
+        Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "PrintingQuotes"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
-        Me.Text = "Printing Quotes"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Text = "Printing Quotes"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
 

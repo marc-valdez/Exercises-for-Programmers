@@ -22,39 +22,46 @@ Partial Class NumberOfCharacters
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 132)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Character Count: 0"
-        '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(12, 12)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(358, 117)
-        Me.RichTextBox1.TabIndex = 2
-        Me.RichTextBox1.Text = ""
-        '
-        'NumberOfCharacters
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 154)
-        Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Name = "NumberOfCharacters"
+        Label1 = New Label()
+        RichTextBox1 = New RichTextBox()
+        SuspendLayout()
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(14, 152)
+        Label1.Margin = New Padding(4, 0, 4, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(106, 15)
+        Label1.TabIndex = 1
+        Label1.Text = "Character Count: 0"
+        ' 
+        ' RichTextBox1
+        ' 
+        RichTextBox1.Location = New Point(14, 14)
+        RichTextBox1.Margin = New Padding(4, 3, 4, 3)
+        RichTextBox1.Name = "RichTextBox1"
+        RichTextBox1.Size = New Size(417, 134)
+        RichTextBox1.TabIndex = 2
+        RichTextBox1.Text = ""
+        ' 
+        ' NumberOfCharacters
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(446, 178)
+        Controls.Add(RichTextBox1)
+        Controls.Add(Label1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "NumberOfCharacters"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
-        Me.Text = "Counting the Number of Characters"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Text = "Counting the Number of Characters"
+        ResumeLayout(False)
+        PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As Label

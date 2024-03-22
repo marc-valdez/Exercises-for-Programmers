@@ -202,7 +202,11 @@ Partial Class CompoundInterest
         Controls.Add(GroupBox1)
         Controls.Add(Button1)
         Controls.Add(TableLayoutPanel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "CompoundInterest"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Determining Compound Interest"
         TableLayoutPanel1.ResumeLayout(False)

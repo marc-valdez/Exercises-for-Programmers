@@ -32,7 +32,7 @@ Partial Class MainMenu
         Button1.Name = "Button1"
         Button1.Size = New Size(254, 23)
         Button1.TabIndex = 0
-        Button1.Text = "IPO"
+        Button1.Text = "Input, Process, and Output"
         Button1.UseVisualStyleBackColor = True
         ' 
         ' Button2
@@ -46,12 +46,16 @@ Partial Class MainMenu
         ' 
         ' MainMenu
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(278, 78)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "MainMenu"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Main Menu"
         ResumeLayout(False)

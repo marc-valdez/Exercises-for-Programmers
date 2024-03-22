@@ -214,7 +214,11 @@ Partial Class PaintCalculator
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "PaintCalculator"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Paint Calculator"
         GroupBox1.ResumeLayout(False)

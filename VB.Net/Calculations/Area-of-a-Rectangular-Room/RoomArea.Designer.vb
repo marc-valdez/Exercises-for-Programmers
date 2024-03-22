@@ -181,7 +181,11 @@ Partial Class RoomArea
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "RoomArea"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Area of a Rectangular Room"
         GroupBox1.ResumeLayout(False)

@@ -70,15 +70,20 @@ Partial Class IPOMenu
         ' 
         ' IPOMenu
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
         ClientSize = New Size(336, 156)
         Controls.Add(Button4)
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "IPOMenu"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "IPO"
         ResumeLayout(False)

@@ -158,8 +158,12 @@ Partial Class MadLib
         ClientSize = New Size(568, 147)
         Controls.Add(RichTextBox1)
         Controls.Add(TableLayoutPanel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "MadLib"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Mad Lib"
         TableLayoutPanel1.ResumeLayout(False)

@@ -82,13 +82,17 @@ Partial Class SelfCheckout
         ' 
         ' SelfCheckout
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(245, 176)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(ItemList)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "SelfCheckout"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Self-Checkout"
         CType(ItemList, ComponentModel.ISupportInitialize).EndInit()

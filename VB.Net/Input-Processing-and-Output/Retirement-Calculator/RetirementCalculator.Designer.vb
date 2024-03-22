@@ -48,9 +48,9 @@ Partial Class RetirementCalculator
         TableLayoutPanel1.Margin = New Padding(4, 3, 4, 3)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 2
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50.0F))
-        TableLayoutPanel1.Size = New Size(353, 58)
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 50F))
+        TableLayoutPanel1.Size = New Size(350, 58)
         TableLayoutPanel1.TabIndex = 0
         ' 
         ' Label1
@@ -96,7 +96,7 @@ Partial Class RetirementCalculator
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.Location = New Point(14, 84)
         Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
@@ -107,13 +107,17 @@ Partial Class RetirementCalculator
         ' 
         ' RetirementCalculator
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(387, 131)
         Controls.Add(Label3)
         Controls.Add(TableLayoutPanel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "RetirementCalculator"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Retirement Calculator"
         TableLayoutPanel1.ResumeLayout(False)

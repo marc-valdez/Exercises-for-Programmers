@@ -90,8 +90,12 @@ Partial Class CalculationsMenu
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Margin = New Padding(4, 3, 4, 3)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "CalculationsMenu"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Calculations"
         ResumeLayout(False)

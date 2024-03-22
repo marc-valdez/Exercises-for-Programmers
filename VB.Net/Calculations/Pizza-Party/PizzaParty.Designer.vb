@@ -179,7 +179,11 @@ Partial Class PizzaParty
         Controls.Add(TextBox1)
         Controls.Add(GroupBox1)
         Controls.Add(TableLayoutPanel1)
+        FormBorderStyle = FormBorderStyle.FixedSingle
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "PizzaParty"
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Pizza Party"
         TableLayoutPanel1.ResumeLayout(False)
