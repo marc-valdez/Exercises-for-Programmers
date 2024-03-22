@@ -5,11 +5,7 @@
     Private _convertedArea As Double
     Private Const CONVERSION_FACTOR = 0.09290304F
 
-    Private Sub RadioButton_Click(sender As Object, e As EventArgs) Handles RadioButton1.Click, RadioButton2.Click
-        UpdateText()
-    End Sub
-
-    Private Sub Inputs_Changed(sender As Object, e As EventArgs) Handles NumericUpDown1.TextChanged, NumericUpDown2.TextChanged
+    Private Sub GetUserInput(sender As Object, e As EventArgs) Handles RadioButton1.Click, RadioButton2.Click, NumericUpDown1.TextChanged, NumericUpDown2.TextChanged
         _length = NumericUpDown1.Value
         _width = NumericUpDown2.Value
         UpdateText()
