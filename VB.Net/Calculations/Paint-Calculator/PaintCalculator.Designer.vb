@@ -86,7 +86,7 @@ Partial Class PaintCalculator
         ' NumericUpDown3
         ' 
         NumericUpDown3.DecimalPlaces = 2
-        NumericUpDown3.Location = New Point(139, 71)
+        NumericUpDown3.Location = New Point(139, 22)
         NumericUpDown3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown3.Name = "NumericUpDown3"
         NumericUpDown3.Size = New Size(127, 23)
@@ -97,7 +97,7 @@ Partial Class PaintCalculator
         ' NumericUpDown4
         ' 
         NumericUpDown4.DecimalPlaces = 2
-        NumericUpDown4.Location = New Point(139, 22)
+        NumericUpDown4.Location = New Point(139, 71)
         NumericUpDown4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown4.Name = "NumericUpDown4"
         NumericUpDown4.Size = New Size(127, 23)
@@ -208,7 +208,7 @@ Partial Class PaintCalculator
         ' 
         ' PaintCalculator
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(299, 253)
         Controls.Add(GroupBox3)
