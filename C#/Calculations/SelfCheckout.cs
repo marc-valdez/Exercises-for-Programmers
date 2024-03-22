@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using static CSharp.DataValidation;
+﻿using static CSharp.DataValidation;
 
 namespace CSharp.Calculations
 {
     internal class SelfCheckout
     {
-        private const float TAX = 0.055f;
+        private const float TAX_RATE = 0.055f;
 
         private class Item
         {
@@ -27,14 +25,12 @@ namespace CSharp.Calculations
 
         private class Basket
         {
-            private readonly List<Item> items;
-            private readonly float subtotal, tax, total;
+            private readonly float? subtotal, tax, total;
             public Basket(List<Item> _items)
             {
-                items = _items;
-                foreach (Item item in items)
-                    subtotal += (float)item.subtotal;
-                tax = subtotal * TAX; 
+                foreach (Item item in _items)
+                    subtotal += item.subtotal;
+                tax = subtotal * TAX_RATE; 
                 total = subtotal + tax;
             }
 
