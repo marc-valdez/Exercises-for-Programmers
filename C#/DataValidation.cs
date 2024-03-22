@@ -2,35 +2,78 @@
 {
     public static class DataValidation
     {
-        public static dynamic? ValidatedNumber(string prompt, dynamic _min = null, dynamic _max = null, string _sentinel = null, string _action = "end")
+        public static T? ValidatedNumber<T>(string _prompt, string _sentinel, string _action = "end", T? _min = null, T? _max = null) where T : struct, IComparable<T>
         {
             while (true)
             {
-                string? user_input = "";
-                if (_sentinel != null)
-                {
-                    Console.Write(prompt.Remove(prompt.Length - 2) + $" (or type '{_sentinel}' to {_action}): ");
-                    user_input = Console.ReadLine();
-                    if (user_input != null && user_input.Equals(_sentinel, StringComparison.CurrentCultureIgnoreCase))
-                        return null;
-                }
-                else
-                {
-                    Console.Write(prompt);
-                    user_input = Console.ReadLine();
-                }
+                Console.Write(_sentinel != null ? $"{_prompt.Remove(_prompt.Length - 2)} (or type '{_sentinel}' to {_action}): " : _prompt);
+                string? userInput = Console.ReadLine();
+
+                if (userInput != null && _sentinel != null && userInput.Equals(_sentinel, StringComparison.CurrentCultureIgnoreCase))
+                    return null;
 
                 try
                 {
-                    float number = Convert.ToSingle(user_input);
-                    if (_min == null || _min <= number && _max == null || _max >= number)
+                    T? number = (T?)Convert.ChangeType(userInput, typeof(T));
+
+                    if ((_min == null || Comparer<T?>.Default.Compare(_min.Value, number) <= 0) && (_max == null || Comparer<T?>.Default.Compare(_max.Value, number) >= 0))
+                    {
                         return number;
+                    }
                     else
-                        Console.WriteLine($"Input out of range. [{_min}-{_max}]");
+                    {
+                        Console.WriteLine($"! Error: Input out of range. [{_min}-{_max}]");
+                    }
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("! Error: Input is NaN");
+                    Console.WriteLine("! Error: Input is Not-a-Number. Please try again.");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("! Error: Input is too large or too small.");
+                }
+                catch (InvalidCastException)
+                {
+                    Console.WriteLine("! Error: Invalid type conversion.");
+                }
+            }
+        }
+
+        public static T ValidatedNumber<T>(string _prompt, T? _min = null, T? _max = null) where T : struct, IComparable<T>
+        {
+            while (true)
+            {
+                Console.Write(_prompt);
+                string? userInput = Console.ReadLine();
+
+                if (userInput == null)
+                    return default;
+
+                try
+                {
+                    T number = (T)Convert.ChangeType(userInput, typeof(T));
+
+                    if ((_min == null || Comparer<T>.Default.Compare(_min.Value, number) <= 0) && (_max == null || Comparer<T>.Default.Compare(_max.Value, number) >= 0))
+                    {
+                        return number;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"! Error: Input out of range. [{_min}-{_max}]");
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("! Error: Input is Not-a-Number. Please try again.");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("! Error: Input is too large or too small.");
+                }
+                catch (InvalidCastException)
+                {
+                    Console.WriteLine("! Error: Invalid type conversion.");
                 }
             }
         }
