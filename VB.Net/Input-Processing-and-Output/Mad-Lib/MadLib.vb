@@ -4,27 +4,12 @@
     Private _adjective As String = "{adjective}"
     Private _adverb As String = "{adverb}"
 
-    Public Sub UpdateText()
-        RichTextBox1.Text = $"Did you know that a {_adjective} {_noun} can {_adverb} {_verb}? I know! It's crazy!"
-    End Sub
-
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged, TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged
         _noun = TextBox1.Text
-        UpdateText()
-    End Sub
-
-    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
         _verb = TextBox2.Text
-        UpdateText()
-    End Sub
-
-    Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles TextBox3.TextChanged
         _adjective = TextBox3.Text
-        UpdateText()
-    End Sub
-
-    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
         _adverb = TextBox4.Text
-        UpdateText()
+
+        RichTextBox1.Text = $"Did you know that a {_adjective} {_noun} can {_adverb} {_verb}? I know! It's crazy!"
     End Sub
 End Class
