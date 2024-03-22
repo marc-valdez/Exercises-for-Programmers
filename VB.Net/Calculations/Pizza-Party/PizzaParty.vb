@@ -1,17 +1,11 @@
 ﻿Public Class PizzaParty
     Private _people = 1, _pizzas = 1, _slices = 1, _pieces = 1, _leftovers = 1
 
-    Private Sub NumericUpDown_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDown_people.ValueChanged, NumericUpDown_q1.ValueChanged, NumericUpDown_q2.ValueChanged
+    Private Sub GetUserInput(sender As Object, e As EventArgs) Handles NumericUpDown_people.ValueChanged, NumericUpDown_q1.ValueChanged, NumericUpDown_q2.ValueChanged, RadioButton1.CheckedChanged, RadioButton2.CheckedChanged
         If NumericUpDown_people.Value <> 0 Then
             _people = NumericUpDown_people.Value
         End If
 
-        UpdateData()
-        UpdateQuestionText()
-        UpdateOutputText()
-    End Sub
-
-    Private Sub RadioButton_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged, RadioButton2.CheckedChanged
         UpdateData()
         UpdateQuestionText()
         UpdateOutputText()
