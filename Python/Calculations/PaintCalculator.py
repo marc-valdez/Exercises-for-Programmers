@@ -1,23 +1,11 @@
+# Revise the program to ensure that inputs are entered as numeric values.
+# Don't allow the user to proceed if the value entered is not numeric.
+from DataValidation import ValidatedNumber
+import math
+
 # Calculate gallons of paint needed to paint the ceiling of a room.
 # Prompt for the length and width, and assume one gallon covers 350 square feet.
 # Display the number of gallons needed to paint the ceiling as a whole number.
-import math
-
-
-# Revise the program to ensure that inputs are entered as numeric values.
-# Don't allow the user to proceed if the value entered is not numeric.
-def ValidatedNumber(prompt, _min=None, _max=None):
-    while True:
-        user_input = input(prompt)
-        try:
-            number = float(user_input)
-            if (_min is None or _min <= number) and (_max is None or _max >= number):
-                return number
-            else:
-                print(f"Input out of range. [{_min}-{_max}]")
-        except ValueError:
-            print("! Error: Input is NaN")
-
 
 # Use a constant to hold the conversion rate.
 ONE_GALLON = 350  # square feet

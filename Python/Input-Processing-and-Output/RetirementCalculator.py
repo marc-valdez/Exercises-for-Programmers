@@ -6,8 +6,7 @@
 # Don't hard-code the current year into your program.
 # Get it from the system time via your programming language.
 import datetime
-today = datetime.date.today()
-year = today.year
+year = datetime.date.today().year
 
 age = input("What is your current age? ")
 retirement_age = input("At what age would you like to retire? ")

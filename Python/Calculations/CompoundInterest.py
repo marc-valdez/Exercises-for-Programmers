@@ -1,23 +1,6 @@
 # Ensure that all the inputs are numeric
 # and that the program will not let the user proceed without valid inputs.
-def ValidatedNumber(prompt, _min=None, _max=None, _type=None, _sentinel=None):
-    while True:
-        if _sentinel is not None:
-            user_input = input(prompt[:-2] + f" (or type \'{_sentinel}\' to end): ")
-            if user_input.upper() == _sentinel:
-                return None
-        else:
-            user_input = input(prompt)
-
-        # Be sure you explicitly convert input to numerical data before doing any calculations.
-        try:
-            number = float(user_input)
-            if (_min is None or _min <= number) and (_max is None or _max >= number):
-                return _type == "float" and number or int(number)
-            else:
-                print(f"Input out of range. [{_min}-{_max}]")
-        except ValueError:
-            print("! Error: Input is NaN")
+from DataValidation import ValidatedNumber
 
 
 # Write a program to compute the value of an investment compounded over time.
@@ -25,12 +8,10 @@ def ValidatedNumber(prompt, _min=None, _max=None, _type=None, _sentinel=None):
 # the interest rate, and the number of periods per year to compound.
 class CompoundInterest:
     def __init__(self):
-        self.principal_amount = ValidatedNumber("What is the principal amount? ", _type="float")
-        self.annual_rate = ValidatedNumber("What is the rate? ", _type="float")
-        self.years_invested = ValidatedNumber("What is the number of years? ", _type="int")
-        self.times_compounded = (ValidatedNumber(
-            "What is the number of times the interest is compounded per year? ",
-            _type="int"))
+        self.principal_amount = ValidatedNumber("What is the principal amount? ")
+        self.annual_rate = ValidatedNumber("What is the rate? ")
+        self.years_invested = int(ValidatedNumber("What is the number of years? "))
+        self.times_compounded = int(ValidatedNumber("What is the number of times the interest is compounded per year? "))
 
         # Prompt for the rate as a percentage (like 15, not .15).
         # Divide the input by 100 in your program.
@@ -49,12 +30,10 @@ class CompoundInterest:
 class InterestGoal:
     def __init__(self):
         # self.principal_amount = ValidatedNumber("What is the principal amount? ", _type="float")
-        self.amount = ValidatedNumber("What is your goal amount? ", _type="float")
-        self.annual_rate = ValidatedNumber("What is the rate? ", _type="float")
-        self.years_invested = ValidatedNumber("What is the number of years? ", _type="int")
-        self.times_compounded = (ValidatedNumber(
-            "What is the number of times the interest is compounded per year? ",
-            _type="int"))
+        self.amount = ValidatedNumber("What is your goal amount? ")
+        self.annual_rate = ValidatedNumber("What is the rate? ")
+        self.years_invested = int(ValidatedNumber("What is the number of years? "))
+        self.times_compounded = int(ValidatedNumber("What is the number of times the interest is compounded per year? "))
 
         # Prompt for the rate as a percentage (like 15, not .15).
         # Divide the input by 100 in your program.

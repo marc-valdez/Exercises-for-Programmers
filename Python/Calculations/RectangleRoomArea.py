@@ -1,24 +1,13 @@
+# Revise the program to ensure that inputs are entered as numeric values.
+# Don't allow the user to proceed if the value entered is not numeric.
+from DataValidation import ValidatedNumber
+
 # Create a program that calculates the area of a room.
 # Prompt the user for the length and width of the room in feet.
 # Then display the area in both square feet and square meters.
 
 # Use a constant to hold the conversion factor.
 CONVERSION_FACTOR = 0.09290304
-
-
-# Revise the program to ensure that inputs are entered as numeric values.
-# Don't allow the user to proceed if the value entered is not numeric.
-def ValidatedNumber(prompt, _min=None, _max=None):
-    while True:
-        user_input = input(prompt)
-        try:
-            number = float(user_input)
-            if (_min is None or _min <= number) and (_max is None or _max >= number):
-                return number
-            else:
-                print(f"Input out of range. [{_min}-{_max}]")
-        except ValueError:
-            print("! Error: Input is NaN")
 
 
 class RectangleRoom:
