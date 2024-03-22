@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CSharp.IPO
+﻿namespace CSharp.IPO
 {
     internal class PrintingQuotes
     {
@@ -9,20 +7,20 @@ namespace CSharp.IPO
         public static void Main2()
         {
             Console.Write("What is the quote? ");
-            string quote = Console.ReadLine();
+            string? quote = Console.ReadLine();
 
             Console.Write("Who said it? ");
-            string speaker = Console.ReadLine();
+            string? speaker = Console.ReadLine();
 
             /*
-            • Use a single output statement to produce this output,
-              using appropriate string-escaping techniques for quotes.
-            • If your language supports string interpolation or string
-              substitution, don’t use it for this exercise. 
-              Use string concatenation instead.
+              • Use a single output statement to produce this output, 
+                using appropriate string-escaping techniques for quotes.
+              • If your language supports string interpolation or string substitution,
+                don’t use it for this exercise. Use string concatenation instead.
             */
-            Console.Write(speaker + " says, " + quote);
-            Console.WriteLine();
+
+            if (speaker != null && quote != null)
+                Console.Write(speaker + " says, " + quote + "\n");
         }
     }
 }
