@@ -7,7 +7,7 @@ namespace CSharp
     {
         public static void Show()
         {
-            while(true)
+            while (true)
             {
                 Console.Clear();
                 var choices = new List<string>
@@ -18,14 +18,10 @@ namespace CSharp
                     "[4] Self-Checkout",
                     "[5] Determining Compound Interest"
                 };
-                foreach (var i in choices)
-                    Console.WriteLine(i);
-                var choice = ValidatedNumber("Enter your choice: ", _min: 1, _max: choices.Count, _sentinel: "BACK", _action: "go back");
-
-                if (choice == null)
-                    break;
-
-                switch ((int)choice)
+                foreach (var i in choices) Console.WriteLine(i);
+                sbyte? choice = ValidatedNumber<sbyte>("Enter your choice: ", _min: 1, _max: (sbyte)choices.Count, _sentinel: "BACK", _action: "go back");
+                if (choice == null) break;
+                switch ((sbyte)choice)
                 {
                     case 1: Console.Clear(); RectangularRoomArea.Main5(); break;
                     case 2: Console.Clear(); PizzaParty.Main6(); break;

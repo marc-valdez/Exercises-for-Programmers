@@ -6,15 +6,15 @@ namespace CSharp.Calculations
     {
         private class Pizza
         {
-            private static int people;
-            private static int pizzas;
-            private static int slices;
-            private static int pieces;
-            private static int leftovers;
+            private static short people;
+            private static short pizzas;
+            private static short slices;
+            private static short pieces;
+            private static short leftovers;
 
             public Pizza(string _method)
             {
-                people = ValidatedNumber("How many people? ");
+                people = ValidatedNumber<short>("How many people? ");
                 if (_method == "splitter")
                     Splitter();
                 else
@@ -24,12 +24,12 @@ namespace CSharp.Calculations
             private static void Splitter()
             {
                 // Input
-                pizzas = ValidatedNumber("How many pizzas do you have? ");
-                slices = ValidatedNumber("How many slices per pizza? ") * pizzas;
+                pizzas = ValidatedNumber<short>("How many pizzas do you have? ");
+                slices = (short)(ValidatedNumber<short>("How many slices per pizza? ") * pizzas);
 
                 // Process
-                pieces = slices / people;
-                leftovers = slices % people;
+                pieces = (short)(slices / people);
+                leftovers = (short)(slices % people);
 
                 // Output
                 Console.WriteLine($"{people} people with {pizzas} pizzas");
@@ -46,13 +46,13 @@ namespace CSharp.Calculations
             private static void Buyer()
             {
                 // Input
-                pieces = ValidatedNumber("How many slices does each person want? ");
-                slices = ValidatedNumber("How many slices are there per pizza? ");
-                
+                pieces = ValidatedNumber<short>("How many slices does each person want? ");
+                slices = ValidatedNumber<short>("How many slices are there per pizza? ");
+
                 // Process
-                var total_slices = (people * pieces);
-                pizzas = (int)Math.Ceiling((decimal)(total_slices / slices));
-                leftovers = total_slices % people;
+                var total_slices = people * pieces;
+                pizzas = (short)Math.Ceiling((decimal)(total_slices / slices));
+                leftovers = (short)(total_slices % people);
 
                 // Output
                 Console.WriteLine($"{people} people with {pieces} slices each");
@@ -72,7 +72,7 @@ namespace CSharp.Calculations
         {
             Console.WriteLine("[1] I want to know how many slices each person should get.");
             Console.WriteLine("[2] I want to know how many pizzas I have to buy.");
-            var choice = ValidatedNumber("Choose an option: ", _min: 1, _max: 2);
+            sbyte choice = ValidatedNumber<sbyte>("Choose an option: ", _min: 1, _max: 2);
             _ = (choice == 1) ? new Pizza("splitter") : new Pizza("buyer");
         }
     }

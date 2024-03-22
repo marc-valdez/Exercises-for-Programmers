@@ -12,11 +12,11 @@ namespace CSharp.Calculations
             public float? subtotal;
             public Item(int _i)
             {
-                price = ValidatedNumber($"Enter the price of item {_i}: ", _sentinel: "STOP");
+                price = ValidatedNumber<float>($"Enter the price of item {_i}: ", _sentinel: "STOP");
                 if (price == null)
                     throw new Exception();
                 
-                quantity = ValidatedNumber($"Enter the quantity of item {_i}: ", _sentinel: "STOP");
+                quantity = ValidatedNumber<float>($"Enter the quantity of item {_i}: ", _sentinel: "STOP");
                 if (quantity == null)
                     throw new Exception();
                 subtotal = price * quantity;

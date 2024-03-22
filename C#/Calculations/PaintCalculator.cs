@@ -13,23 +13,23 @@ namespace CSharp.Calculations
             {
                 if (_roomType == "rectangular")
                 {
-                    float length = ValidatedNumber("Length: ");
-                    float width = ValidatedNumber("Width: ");
+                    float length = ValidatedNumber<float>("Length: ");
+                    float width = ValidatedNumber<float>("Width: ");
                     area = length * width;
                 }
                 else if (_roomType == "round")
                 {
-                    float radius = ValidatedNumber("Radius: ");
+                    float radius = ValidatedNumber<float>("Radius: ");
                     area = (float)(Math.PI * radius);
                 }
                 else if (_roomType == "l-shaped")
                 {
-                    float length1 = ValidatedNumber("Length of the first rectangle: ");
-                    float width1 = ValidatedNumber("Width of the first rectangle: ");
+                    float length1 = ValidatedNumber<float>("Length of the first rectangle: ");
+                    float width1 = ValidatedNumber<float>("Width of the first rectangle: ");
                     float area1 = length1 * width1;
 
-                    float length2 = ValidatedNumber("Length of the second rectangle: ");
-                    float width2 = ValidatedNumber("Width of the second rectangle: ");
+                    float length2 = ValidatedNumber<float>("Length of the second rectangle: ");
+                    float width2 = ValidatedNumber<float>("Width of the second rectangle: ");
                     float area2 = length2 * width2;
 
                     area = area1 + area2;
@@ -51,7 +51,7 @@ namespace CSharp.Calculations
             Console.WriteLine("[1] Square/Rectangular");
             Console.WriteLine("[2] Round");
             Console.WriteLine("[3] L-Shaped");
-            float choice = ValidatedNumber("Enter your room type: ", _min: 1, _max: 3);
+            sbyte choice = ValidatedNumber<sbyte>("Enter your room type: ", _min: 1, _max: 3);
             if (choice == 1)
                 _ = new PaintGallons("rectangular");
             else if (choice == 2)

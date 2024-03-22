@@ -17,14 +17,10 @@ namespace CSharp
                     "[3] MadLib",
                     "[4] Retirement Calculator"
                 };
-                foreach (var i in choices)
-                    Console.WriteLine(i);
-                var choice = ValidatedNumber("Enter your choice: ", _min: 1, _max: choices.Count, _sentinel: "BACK", _action: "go back");
-
-                if (choice == null)
-                    break;
-
-                switch ((int)choice)
+                foreach (var i in choices) Console.WriteLine(i);
+                sbyte? choice = ValidatedNumber<sbyte>("Enter your choice: ", _min: 1, _max: (sbyte)choices.Count, _sentinel: "BACK", _action: "go back");
+                if (choice == null) break;
+                switch ((sbyte)choice)
                 {
                     case 1: Console.Clear(); NumberOfCharacters.Main1(); break;
                     case 2: Console.Clear(); PrintingQuotes.Main2(); break;
