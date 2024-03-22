@@ -46,7 +46,7 @@ Partial Class MainMenu
         ' 
         ' MainMenu
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(278, 78)
         Controls.Add(Button2)
