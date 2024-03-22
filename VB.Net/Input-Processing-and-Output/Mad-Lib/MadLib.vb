@@ -5,7 +5,7 @@
     Private _adverb As String = "{adverb}"
 
     Public Sub UpdateText()
-        RichTextBox1.Text = $"Do you {_verb} your {_adjective} {_noun} {_adverb}? That's hilarious!"
+        RichTextBox1.Text = $"Did you know that a {_adjective} {_noun} can {_adverb} {_verb}? I know! It's crazy!"
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
