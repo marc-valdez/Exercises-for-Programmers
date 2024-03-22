@@ -56,9 +56,9 @@ Partial Class PaintCalculator
         GroupBox1.Controls.Add(Label1)
         GroupBox1.Controls.Add(NumericUpDown2)
         GroupBox1.Controls.Add(NumericUpDown1)
-        GroupBox1.Location = New Point(12, 125)
+        GroupBox1.Location = New Point(12, 74)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(276, 121)
+        GroupBox1.Size = New Size(258, 121)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Measurements"
@@ -89,7 +89,7 @@ Partial Class PaintCalculator
         NumericUpDown3.Location = New Point(139, 22)
         NumericUpDown3.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown3.Name = "NumericUpDown3"
-        NumericUpDown3.Size = New Size(127, 23)
+        NumericUpDown3.Size = New Size(110, 23)
         NumericUpDown3.TabIndex = 5
         NumericUpDown3.Value = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown3.Visible = False
@@ -100,7 +100,7 @@ Partial Class PaintCalculator
         NumericUpDown4.Location = New Point(139, 71)
         NumericUpDown4.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown4.Name = "NumericUpDown4"
-        NumericUpDown4.Size = New Size(127, 23)
+        NumericUpDown4.Size = New Size(110, 23)
         NumericUpDown4.TabIndex = 4
         NumericUpDown4.Value = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown4.Visible = False
@@ -129,7 +129,7 @@ Partial Class PaintCalculator
         NumericUpDown2.Location = New Point(6, 71)
         NumericUpDown2.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown2.Name = "NumericUpDown2"
-        NumericUpDown2.Size = New Size(127, 23)
+        NumericUpDown2.Size = New Size(110, 23)
         NumericUpDown2.TabIndex = 1
         NumericUpDown2.Value = New Decimal(New Integer() {1, 0, 0, 0})
         ' 
@@ -139,16 +139,16 @@ Partial Class PaintCalculator
         NumericUpDown1.Location = New Point(6, 22)
         NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(127, 23)
+        NumericUpDown1.Size = New Size(110, 23)
         NumericUpDown1.TabIndex = 0
         NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         ' 
         ' GroupBox2
         ' 
         GroupBox2.Controls.Add(TextBox1)
-        GroupBox2.Location = New Point(133, 12)
+        GroupBox2.Location = New Point(12, 201)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(155, 107)
+        GroupBox2.Size = New Size(258, 107)
         GroupBox2.TabIndex = 1
         GroupBox2.TabStop = False
         GroupBox2.Text = "Recommendation"
@@ -159,7 +159,7 @@ Partial Class PaintCalculator
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(143, 80)
+        TextBox1.Size = New Size(246, 80)
         TextBox1.TabIndex = 0
         ' 
         ' GroupBox3
@@ -169,7 +169,7 @@ Partial Class PaintCalculator
         GroupBox3.Controls.Add(RadioButton2)
         GroupBox3.Location = New Point(12, 12)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(115, 107)
+        GroupBox3.Size = New Size(258, 56)
         GroupBox3.TabIndex = 2
         GroupBox3.TabStop = False
         GroupBox3.Text = "Room Type"
@@ -177,7 +177,7 @@ Partial Class PaintCalculator
         ' RadioButton3
         ' 
         RadioButton3.AutoSize = True
-        RadioButton3.Location = New Point(14, 73)
+        RadioButton3.Location = New Point(174, 22)
         RadioButton3.Name = "RadioButton3"
         RadioButton3.Size = New Size(75, 19)
         RadioButton3.TabIndex = 2
@@ -199,7 +199,7 @@ Partial Class PaintCalculator
         ' RadioButton2
         ' 
         RadioButton2.AutoSize = True
-        RadioButton2.Location = New Point(14, 48)
+        RadioButton2.Location = New Point(108, 23)
         RadioButton2.Name = "RadioButton2"
         RadioButton2.Size = New Size(60, 19)
         RadioButton2.TabIndex = 1
@@ -210,7 +210,7 @@ Partial Class PaintCalculator
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(299, 253)
+        ClientSize = New Size(282, 317)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)

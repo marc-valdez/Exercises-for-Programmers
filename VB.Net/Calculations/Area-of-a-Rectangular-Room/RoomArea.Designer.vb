@@ -56,7 +56,7 @@ Partial Class RoomArea
         ' RadioButton2
         ' 
         RadioButton2.AutoSize = True
-        RadioButton2.Location = New Point(15, 47)
+        RadioButton2.Location = New Point(148, 22)
         RadioButton2.Name = "RadioButton2"
         RadioButton2.Size = New Size(61, 19)
         RadioButton2.TabIndex = 1
@@ -68,9 +68,9 @@ Partial Class RoomArea
         ' 
         GroupBox1.Controls.Add(RadioButton1)
         GroupBox1.Controls.Add(RadioButton2)
-        GroupBox1.Location = New Point(15, 12)
+        GroupBox1.Location = New Point(12, 12)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(89, 156)
+        GroupBox1.Size = New Size(281, 54)
         GroupBox1.TabIndex = 2
         GroupBox1.TabStop = False
         GroupBox1.Text = "Unit"
@@ -80,9 +80,9 @@ Partial Class RoomArea
         NumericUpDown1.BackColor = SystemColors.Window
         NumericUpDown1.Cursor = Cursors.IBeam
         NumericUpDown1.DecimalPlaces = 2
-        NumericUpDown1.Location = New Point(15, 22)
+        NumericUpDown1.Location = New Point(6, 22)
         NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(100, 23)
+        NumericUpDown1.Size = New Size(127, 23)
         NumericUpDown1.TabIndex = 3
         ' 
         ' Label1
@@ -100,9 +100,9 @@ Partial Class RoomArea
         GroupBox2.Controls.Add(Label2)
         GroupBox2.Controls.Add(NumericUpDown1)
         GroupBox2.Controls.Add(Label1)
-        GroupBox2.Location = New Point(110, 12)
+        GroupBox2.Location = New Point(12, 72)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(230, 75)
+        GroupBox2.Size = New Size(281, 75)
         GroupBox2.TabIndex = 6
         GroupBox2.TabStop = False
         GroupBox2.Text = "Inputs"
@@ -112,15 +112,15 @@ Partial Class RoomArea
         NumericUpDown2.BackColor = SystemColors.Window
         NumericUpDown2.Cursor = Cursors.IBeam
         NumericUpDown2.DecimalPlaces = 2
-        NumericUpDown2.Location = New Point(121, 22)
+        NumericUpDown2.Location = New Point(148, 22)
         NumericUpDown2.Name = "NumericUpDown2"
-        NumericUpDown2.Size = New Size(100, 23)
+        NumericUpDown2.Size = New Size(127, 23)
         NumericUpDown2.TabIndex = 8
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(121, 48)
+        Label2.Location = New Point(148, 48)
         Label2.Name = "Label2"
         Label2.Size = New Size(39, 15)
         Label2.TabIndex = 7
@@ -132,9 +132,9 @@ Partial Class RoomArea
         GroupBox3.Controls.Add(Label3)
         GroupBox3.Controls.Add(TextBox2)
         GroupBox3.Controls.Add(TextBox1)
-        GroupBox3.Location = New Point(110, 93)
+        GroupBox3.Location = New Point(12, 153)
         GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(230, 75)
+        GroupBox3.Size = New Size(281, 75)
         GroupBox3.TabIndex = 7
         GroupBox3.TabStop = False
         GroupBox3.Text = "Area"
@@ -142,7 +142,7 @@ Partial Class RoomArea
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(121, 48)
+        Label4.Location = New Point(148, 48)
         Label4.Name = "Label4"
         Label4.Size = New Size(43, 15)
         Label4.TabIndex = 3
@@ -159,25 +159,25 @@ Partial Class RoomArea
         ' 
         ' TextBox2
         ' 
-        TextBox2.Location = New Point(121, 22)
+        TextBox2.Location = New Point(148, 22)
         TextBox2.Name = "TextBox2"
         TextBox2.ReadOnly = True
-        TextBox2.Size = New Size(100, 23)
+        TextBox2.Size = New Size(127, 23)
         TextBox2.TabIndex = 1
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(15, 22)
+        TextBox1.Location = New Point(6, 22)
         TextBox1.Name = "TextBox1"
         TextBox1.ReadOnly = True
-        TextBox1.Size = New Size(100, 23)
+        TextBox1.Size = New Size(127, 23)
         TextBox1.TabIndex = 0
         ' 
         ' RoomArea
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(353, 180)
+        ClientSize = New Size(305, 238)
         Controls.Add(GroupBox3)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)

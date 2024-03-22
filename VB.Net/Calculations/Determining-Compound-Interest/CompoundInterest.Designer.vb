@@ -59,10 +59,10 @@ Partial Class CompoundInterest
         TableLayoutPanel1.Location = New Point(9, 102)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
         TableLayoutPanel1.RowCount = 4
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25.0F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 25F))
         TableLayoutPanel1.Size = New Size(467, 112)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -112,6 +112,7 @@ Partial Class CompoundInterest
         ' 
         NumericUpDown2.Anchor = AnchorStyles.Left Or AnchorStyles.Right
         NumericUpDown2.DecimalPlaces = 1
+        NumericUpDown2.Increment = New Decimal(New Integer() {1, 0, 0, 65536})
         NumericUpDown2.Location = New Point(3, 31)
         NumericUpDown2.Name = "NumericUpDown2"
         NumericUpDown2.Size = New Size(100, 23)
@@ -195,7 +196,7 @@ Partial Class CompoundInterest
         ' 
         ' CompoundInterest
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(484, 249)
         Controls.Add(GroupBox1)
