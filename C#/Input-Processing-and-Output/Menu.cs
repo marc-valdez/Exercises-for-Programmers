@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using CSharp.IPO;
+﻿using CSharp.IPO;
 using static CSharp.DataValidation;
 
 namespace CSharp

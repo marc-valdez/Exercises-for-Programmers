@@ -1,5 +1,4 @@
-﻿using System;
-using static CSharp.DataValidation;
+﻿using static CSharp.DataValidation;
 namespace CSharp.Calculations
 {
     internal class PaintCalculator

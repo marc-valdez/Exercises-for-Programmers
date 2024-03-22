@@ -30,6 +30,7 @@
              • If your language supports string interpolation or string
                substitution, use it to build up the output.
             */
+
             Console.WriteLine($"Did you know that a {madlib.adjective} {madlib.noun} can {madlib.adverb} {madlib.verb}? I know! It's crazy!");
         }
     }

@@ -1,6 +1,4 @@
 ﻿using CSharp.Calculations;
-using System;
-using System.Collections.Generic;
 using static CSharp.DataValidation;
 
 namespace CSharp
